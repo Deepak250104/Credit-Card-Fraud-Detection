@@ -1,6 +1,4 @@
-I understand now. Here's the corrected markdown where the formatting is as you requested:
 
-```markdown
 # Credit Card Fraud Detection Project
 
 This project implements machine learning techniques to detect fraudulent credit card transactions from a highly imbalanced dataset. The workflow includes data acquisition, preprocessing, feature engineering, addressing class imbalance, model selection, hyperparameter tuning, and final evaluation.
@@ -112,4 +110,3 @@ This project is open-source and available under the MIT License.
 ## Author 
 
 Deepak250104
-```

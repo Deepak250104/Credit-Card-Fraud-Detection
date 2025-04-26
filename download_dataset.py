@@ -1,20 +1,17 @@
-import kagglehub
 import os
+from kaggle.api.kaggle_api_extended import KaggleApi
 
-# Define the path where the dataset should be downloaded
+# Define the path where the dataset will be downloaded
 download_path = 'Data/'
-
-# Ensure the download directory exists
 os.makedirs(download_path, exist_ok=True)
 
+# Initialize Kaggle API
+api = KaggleApi()
+api.authenticate()
+
 try:
-    # Download the latest version of the dataset to the specified path
-    path = kagglehub.dataset_download("mlg-ulb/creditcardfraud", path=download_path, force=False)
-    # force=False will only download if the dataset doesn't exist or a new version is available
-
-    print("Dataset downloaded successfully to:", path)
-
+    print("Starting download...")
+    api.dataset_download_files('mlg-ulb/creditcardfraud', path=download_path, unzip=True)
+    print("Dataset downloaded and extracted successfully.")
 except Exception as e:
-    print(f"An error occurred during dataset download: {e}")
-    print("Please ensure you have the kagglehub library installed (`pip install kagglehub`)")
-    print("and that you are authenticated with Kaggle (you might need a Kaggle API key).")
+    print(f"Error: {e}")

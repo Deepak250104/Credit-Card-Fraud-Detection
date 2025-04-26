@@ -105,7 +105,7 @@ The evaluation metrics indicate a strong performance in detecting fraudulent tra
 
 ## License
 
-This project is open-source and available under the MIT License.
+This project is open-source and available under the [MIT License](https://opensource.org/license/MIT).
 
 ## Author 
 

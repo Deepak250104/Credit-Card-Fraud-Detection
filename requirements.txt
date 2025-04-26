@@ -6,4 +6,4 @@ seaborn
 imblearn
 joblib
 lightgbm
-kagglehub
+kaggle
